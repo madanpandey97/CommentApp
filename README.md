@@ -13,8 +13,7 @@ Note The comment and sub comment is user specific no other user can delete or up
 ## please import the following postman collection link to get the details of api 
 Please pass the require params in body 
 ``` 
-https://www.getpostman.com/collections/a286fd4566976b0fde04
-```
+https://www.getpostman.com/collections/a286fd4566976b0fde04```
 
 ## To run the Product 
 
