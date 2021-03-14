@@ -201,3 +201,22 @@ class SubCommentDeleteView(generics.DestroyAPIView):
             status=status.HTTP_200_OK,
         )
 
+
+class SubCommentUpdateView(generics.UpdateAPIView):
+    __doc__ = """
+    Update View for the  reply of comment thread 
+    """
+
+    permission_classes = (IsAuthenticated,)
+    serializer_class = serializers.SubCommentSerializer
+
+    queryset = SubComment.objects.all()
+
+    def put(self, request, *args, **kwargs):
+        user = request.user
+        data = self.partial_update(request, *args, **kwargs)
+        logger.info(f"{user} request update the reply of  comment section {request.data}")
+        return Response(
+            {"status": True, "data": data.data},
+            status=status.HTTP_200_OK,
+        )

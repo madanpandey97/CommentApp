@@ -11,5 +11,6 @@ urlpatterns = [
     path('get-all-comments/', views.CommentListAllView.as_view()),
     path('sub-comment/create/', views.SubCommentCreateView.as_view()),
     path('sub-comment/delete/<int:pk>/', views.SubCommentDeleteView.as_view()),
+    path('sub-comment/update/<int:pk>/', views.SubCommentUpdateView.as_view()),
 
 ]
